@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://byo17606sel5e"]
+
+[ext_resource type="Script" path="res://scripts/devotion_counts.gd" id="1_vw45h"]
+[ext_resource type="PackedScene" uid="uid://crx0d3l4dascf" path="res://scenes/devotion_spin_box.tscn" id="1_ykaa4"]
+
+[node name="DevotionCounts" type="VBoxContainer" node_paths=PackedStringArray("devotion_inputs")]
+custom_minimum_size = Vector2(200, 0)
+script = ExtResource("1_vw45h")
+devotion_inputs = [NodePath("DevotionSpinBoxWhite"), NodePath("DevotionSpinBoxBlue"), NodePath("DevotionSpinBoxBlack"), NodePath("DevotionSpinBoxRed"), NodePath("DevotionSpinBoxGreen")]
+
+[node name="DevotionHeader" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Devotion Counts"
+
+[node name="DevotionSpinBoxWhite" parent="." instance=ExtResource("1_ykaa4")]
+layout_mode = 2
+label_text = "White"
+mana_key = "w"
+
+[node name="DevotionSpinBoxBlue" parent="." instance=ExtResource("1_ykaa4")]
+layout_mode = 2
+label_text = "Blue"
+mana_key = "u"
+
+[node name="DevotionSpinBoxBlack" parent="." instance=ExtResource("1_ykaa4")]
+layout_mode = 2
+label_text = "Black"
+mana_key = "b"
+
+[node name="DevotionSpinBoxRed" parent="." instance=ExtResource("1_ykaa4")]
+layout_mode = 2
+
+[node name="DevotionSpinBoxGreen" parent="." instance=ExtResource("1_ykaa4")]
+layout_mode = 2
+label_text = "Green"
+mana_key = "g"
+
+[node name="DevotionTotal" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TotalLabel" type="Label" parent="DevotionTotal"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Total"
+
+[node name="TotalAmountLabel" type="Label" parent="DevotionTotal"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+text = "0"
+horizontal_alignment = 2
+
+[node name="Spacer" type="Control" parent="DevotionTotal"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
