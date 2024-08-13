@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bkgebu54yaih1"]
+[gd_scene load_steps=3 format=3 uid="uid://bkgebu54yaih1"]
 
 [ext_resource type="PackedScene" uid="uid://byo17606sel5e" path="res://scenes/devotion_counts.tscn" id="1_i0408"]
+[ext_resource type="PackedScene" uid="uid://djqfxlo8q7vwc" path="res://scenes/land_count.tscn" id="2_4i25s"]
 
 [node name="LandCalculator" type="Control"]
 layout_mode = 3
@@ -27,6 +28,10 @@ theme_override_constants/margin_bottom = 10
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="DevotionCounts" parent="PanelContainer/MarginContainer/HBoxContainer" instance=ExtResource("1_i0408")]
+layout_mode = 2
+
+[node name="LandCount" parent="PanelContainer/MarginContainer/HBoxContainer" instance=ExtResource("2_4i25s")]
 layout_mode = 2
