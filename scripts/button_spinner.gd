@@ -1,5 +1,5 @@
 @tool
-extends HBoxContainer
+extends PanelContainer
 
 @export
 var maximum: int = 50

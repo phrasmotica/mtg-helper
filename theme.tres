@@ -1,0 +1,37 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://bptm41y4tvaqr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4mlk2"]
+bg_color = Color(0.392701, 0.637098, 0.754504, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ms5pj"]
+bg_color = Color(0.824809, 0.474035, 0.607892, 1)
+corner_radius_top_left = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ah40"]
+bg_color = Color(0.384998, 0.666134, 0.5657, 1)
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ehxbp"]
+bg_color = Color(0.392701, 0.637098, 0.754504, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[resource]
+AmountLabel/base_type = &"Label"
+AmountLabel/styles/normal = SubResource("StyleBoxFlat_4mlk2")
+SpinnerButtonLeft/base_type = &"Button"
+SpinnerButtonLeft/font_sizes/font_size = 24
+SpinnerButtonLeft/styles/normal = SubResource("StyleBoxFlat_ms5pj")
+SpinnerButtonRight/base_type = &"Button"
+SpinnerButtonRight/font_sizes/font_size = 24
+SpinnerButtonRight/styles/normal = SubResource("StyleBoxFlat_8ah40")
+SpinnerPanelContainer/base_type = &"PanelContainer"
+SpinnerPanelContainer/styles/panel = SubResource("StyleBoxFlat_ehxbp")

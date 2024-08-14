@@ -1,19 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://bo8ppyfh8pltu"]
+[gd_scene load_steps=3 format=3 uid="uid://bo8ppyfh8pltu"]
 
+[ext_resource type="Theme" uid="uid://bptm41y4tvaqr" path="res://theme.tres" id="1_3xxb7"]
 [ext_resource type="Script" path="res://scripts/button_spinner.gd" id="1_xdkxr"]
 
-[node name="ButtonSpinner" type="HBoxContainer"]
-size_flags_horizontal = 3
+[node name="ButtonSpinner" type="PanelContainer"]
+offset_right = 144.0
+offset_bottom = 38.0
+theme = ExtResource("1_3xxb7")
+theme_type_variation = &"SpinnerPanelContainer"
 script = ExtResource("1_xdkxr")
 
-[node name="MinusButton" type="Button" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="MinusButton" type="Button" parent="HBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"SpinnerButtonLeft"
 text = "-"
 
-[node name="AmountLabel" type="Label" parent="."]
+[node name="AmountLabel" type="Label" parent="HBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(40, 2.08165e-12)
 layout_mode = 2
@@ -21,12 +32,15 @@ theme_override_font_sizes/font_size = 24
 text = "0"
 horizontal_alignment = 1
 
-[node name="PlusButton" type="Button" parent="."]
+[node name="PlusButton" type="Button" parent="HBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"SpinnerButtonRight"
 text = "+"
 
-[connection signal="pressed" from="MinusButton" to="." method="_on_minus_button_pressed"]
-[connection signal="pressed" from="PlusButton" to="." method="_on_plus_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/MinusButton" to="." method="_on_minus_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/PlusButton" to="." method="_on_plus_button_pressed"]
