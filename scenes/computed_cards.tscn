@@ -37,3 +37,10 @@ land_name = "Mountain"
 [node name="LandAmountLabelForest" parent="." instance=ExtResource("1_cynjq")]
 layout_mode = 2
 land_name = "Forest"
+
+[node name="ExcessLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.783523, 0.783523, 0.783523, 1)
+theme_override_font_sizes/font_size = 24
+text = "+0 remaining"
