@@ -2,6 +2,9 @@
 class_name ComputedCards extends VBoxContainer
 
 @export
+var hide_if_none := false
+
+@export
 var land_amount_labels := {}
 
 @onready
@@ -21,9 +24,10 @@ var total_lands: int = 0:
 			excess_label.hide()
 
 func _ready():
-	update_lands()
+	if not Engine.is_editor_hint():
+		update_lands()
 
-	excess_label.hide()
+		excess_label.hide()
 
 func _on_devotion_counts_devotion_changed(dr: DevotionRecord):
 	devotion_record = dr
@@ -34,18 +38,19 @@ func _on_land_count_count_changed(count: int):
 	update_lands()
 
 func update_lands():
-	if not devotion_record:
-		return
-
 	var computed_lands := 0
 
 	for k in land_amount_labels.keys():
+		var amount := 0
+
+		if devotion_record:
+			var proportion := devotion_record.get_proportion(k)
+			amount = roundi(proportion * land_count)
+
 		var label: LandAmountLabel = get_node(land_amount_labels[k])
 
-		var proportion := devotion_record.get_proportion(k)
-		var amount = roundi(proportion * land_count)
-
 		label.amount = amount
+		label.visible = amount > 0 or not hide_if_none
 
 		computed_lands += amount
 

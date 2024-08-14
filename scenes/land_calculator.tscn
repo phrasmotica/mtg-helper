@@ -46,6 +46,7 @@ theme_override_constants/separation = 10
 [node name="ComputedCards" parent="PanelContainer/MarginContainer/HBoxContainer" instance=ExtResource("3_wrttc")]
 layout_mode = 2
 size_flags_horizontal = 3
+hide_if_none = true
 
 [connection signal="devotion_changed" from="PanelContainer/MarginContainer/HBoxContainer/DevotionCounts" to="PanelContainer/MarginContainer/HBoxContainer/ComputedCards" method="_on_devotion_counts_devotion_changed"]
 [connection signal="count_changed" from="PanelContainer/MarginContainer/HBoxContainer/LandCount" to="PanelContainer/MarginContainer/HBoxContainer/ComputedCards" method="_on_land_count_count_changed"]
