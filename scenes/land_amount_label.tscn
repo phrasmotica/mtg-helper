@@ -6,8 +6,10 @@
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_boe7r")
+land_name = "Plains"
 
 [node name="Label" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
-text = "0x "
+theme_override_font_sizes/font_size = 24
+text = "0x Plains"

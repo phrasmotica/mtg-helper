@@ -8,7 +8,7 @@ script = ExtResource("1_wqeg8")
 
 [node name="LandHeader" type="Label" parent="."]
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 36
 text = "Desired Land Count"
 
 [node name="SpinBox" type="SpinBox" parent="."]

@@ -16,12 +16,11 @@ land_amount_labels = {
 
 [node name="CardsHeader" type="Label" parent="."]
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 36
 text = "Computed Cards"
 
 [node name="LandAmountLabelPlains" parent="." instance=ExtResource("1_cynjq")]
 layout_mode = 2
-land_name = "Plains"
 
 [node name="LandAmountLabelIsland" parent="." instance=ExtResource("1_cynjq")]
 layout_mode = 2

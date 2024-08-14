@@ -10,7 +10,7 @@ devotion_inputs = [NodePath("DevotionSpinBoxWhite"), NodePath("DevotionSpinBoxBl
 
 [node name="DevotionHeader" type="Label" parent="."]
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 36
 text = "Devotion Counts"
 
 [node name="DevotionSpinBoxWhite" parent="." instance=ExtResource("1_ykaa4")]
