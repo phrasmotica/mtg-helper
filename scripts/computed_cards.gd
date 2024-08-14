@@ -47,6 +47,9 @@ func update_lands():
 			var proportion := devotion_record.get_proportion(k)
 			amount = roundi(proportion * land_count)
 
+			# ensure we don't overflow
+			amount = min(amount, land_count - computed_lands)
+
 		var label: LandAmountLabel = get_node(land_amount_labels[k])
 
 		label.amount = amount
