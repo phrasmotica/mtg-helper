@@ -24,12 +24,12 @@ signal amount_changed(amount: int)
 
 func _on_minus_button_pressed():
 	if Input.is_key_pressed(KEY_SHIFT):
-		amount = 0
+		amount -= 10
 	else:
 		amount -= 1
 
 func _on_plus_button_pressed():
 	if Input.is_key_pressed(KEY_SHIFT):
-		amount = maximum
+		amount += 10
 	else:
 		amount += 1
