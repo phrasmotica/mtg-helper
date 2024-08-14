@@ -19,6 +19,9 @@ var land_name := "":
 @onready
 var label: Label = %Label
 
+func _ready():
+	update_text()
+
 func update_text():
 	if label:
 		label.text = str(amount) + "x " + land_name

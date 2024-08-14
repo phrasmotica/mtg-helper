@@ -1,15 +1,40 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxdd4iggnpfew"]
+[gd_scene load_steps=3 format=3 uid="uid://bxdd4iggnpfew"]
 
 [ext_resource type="PackedScene" uid="uid://bnvabli4di384" path="res://scenes/land_amount_label.tscn" id="1_cynjq"]
+[ext_resource type="Script" path="res://scripts/computed_cards.gd" id="1_kmmji"]
 
 [node name="ComputedCards" type="VBoxContainer"]
 custom_minimum_size = Vector2(200, 0)
+script = ExtResource("1_kmmji")
+land_amount_labels = {
+"b": NodePath("LandAmountLabelSwamp"),
+"g": NodePath("LandAmountLabelForest"),
+"r": NodePath("LandAmountLabelMountain"),
+"u": NodePath("LandAmountLabelIsland"),
+"w": NodePath("LandAmountLabelPlains")
+}
 
 [node name="CardsHeader" type="Label" parent="."]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Computed Cards"
 
-[node name="PlainsAmountLabel" parent="." instance=ExtResource("1_cynjq")]
+[node name="LandAmountLabelPlains" parent="." instance=ExtResource("1_cynjq")]
 layout_mode = 2
 land_name = "Plains"
+
+[node name="LandAmountLabelIsland" parent="." instance=ExtResource("1_cynjq")]
+layout_mode = 2
+land_name = "Island"
+
+[node name="LandAmountLabelSwamp" parent="." instance=ExtResource("1_cynjq")]
+layout_mode = 2
+land_name = "Swamp"
+
+[node name="LandAmountLabelMountain" parent="." instance=ExtResource("1_cynjq")]
+layout_mode = 2
+land_name = "Mountain"
+
+[node name="LandAmountLabelForest" parent="." instance=ExtResource("1_cynjq")]
+layout_mode = 2
+land_name = "Forest"
