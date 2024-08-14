@@ -11,9 +11,31 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 36
 text = "Desired Land Count"
 
-[node name="SpinBox" type="SpinBox" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="SpinBox" type="SpinBox" parent="HBoxContainer"]
+visible = false
 layout_mode = 2
 max_value = 30.0
 alignment = 2
 
-[connection signal="value_changed" from="SpinBox" to="." method="_on_spin_box_value_changed"]
+[node name="AmountLabel" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 2.08165e-12)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 2
+
+[node name="HSlider" type="HSlider" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 2.08165e-12)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 30.0
+
+[connection signal="value_changed" from="HBoxContainer/SpinBox" to="." method="_on_spin_box_value_changed"]
+[connection signal="value_changed" from="HBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
