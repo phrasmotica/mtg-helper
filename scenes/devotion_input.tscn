@@ -1,12 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://crx0d3l4dascf"]
 
-[ext_resource type="Script" path="res://scripts/devotion_spin_box.gd" id="1_qnjul"]
-[ext_resource type="PackedScene" uid="uid://bo8ppyfh8pltu" path="res://scenes/button_spinner.tscn" id="2_j4y6m"]
+[ext_resource type="Script" path="res://scripts/devotion_input.gd" id="1_epnhj"]
+[ext_resource type="PackedScene" uid="uid://bo8ppyfh8pltu" path="res://scenes/button_spinner.tscn" id="2_i7asp"]
 
-[node name="DevotionSpinBox" type="HBoxContainer"]
+[node name="DevotionInput" type="HBoxContainer"]
 custom_minimum_size = Vector2(300, 2.08165e-12)
 theme_override_constants/separation = 10
-script = ExtResource("1_qnjul")
+script = ExtResource("1_epnhj")
 label_text = "Red"
 mana_key = "r"
 
@@ -18,7 +18,7 @@ size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 24
 text = "Red"
 
-[node name="ButtonSpinner" parent="." instance=ExtResource("2_j4y6m")]
+[node name="ButtonSpinner" parent="." instance=ExtResource("2_i7asp")]
 layout_mode = 2
 
 [connection signal="amount_changed" from="ButtonSpinner" to="." method="_on_button_spinner_amount_changed"]

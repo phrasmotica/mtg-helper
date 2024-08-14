@@ -2,7 +2,7 @@
 extends VBoxContainer
 
 @export
-var devotion_inputs: Array[DevotionSpinBox] = []
+var devotion_inputs: Array[DevotionInput] = []
 
 @onready
 var total_amount_label: Label = %TotalAmountLabel

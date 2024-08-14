@@ -1,5 +1,5 @@
 @tool
-class_name DevotionSpinBox extends HBoxContainer
+class_name DevotionInput extends HBoxContainer
 
 @export
 var label_text := "":

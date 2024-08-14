@@ -1,37 +1,37 @@
 [gd_scene load_steps=3 format=3 uid="uid://byo17606sel5e"]
 
 [ext_resource type="Script" path="res://scripts/devotion_counts.gd" id="1_vw45h"]
-[ext_resource type="PackedScene" uid="uid://crx0d3l4dascf" path="res://scenes/devotion_spin_box.tscn" id="1_ykaa4"]
+[ext_resource type="PackedScene" uid="uid://crx0d3l4dascf" path="res://scenes/devotion_input.tscn" id="1_ykaa4"]
 
 [node name="DevotionCounts" type="VBoxContainer" node_paths=PackedStringArray("devotion_inputs")]
 custom_minimum_size = Vector2(200, 0)
 script = ExtResource("1_vw45h")
-devotion_inputs = [NodePath("DevotionSpinBoxWhite"), NodePath("DevotionSpinBoxBlue"), NodePath("DevotionSpinBoxBlack"), NodePath("DevotionSpinBoxRed"), NodePath("DevotionSpinBoxGreen")]
+devotion_inputs = [NodePath("DevotionInputWhite"), NodePath("DevotionInputBlue"), NodePath("DevotionInputBlack"), NodePath("DevotionInputRed"), NodePath("DevotionInputGreen")]
 
 [node name="DevotionHeader" type="Label" parent="."]
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
 text = "Devotion Counts"
 
-[node name="DevotionSpinBoxWhite" parent="." instance=ExtResource("1_ykaa4")]
+[node name="DevotionInputWhite" parent="." instance=ExtResource("1_ykaa4")]
 layout_mode = 2
 label_text = "White"
 mana_key = "w"
 
-[node name="DevotionSpinBoxBlue" parent="." instance=ExtResource("1_ykaa4")]
+[node name="DevotionInputBlue" parent="." instance=ExtResource("1_ykaa4")]
 layout_mode = 2
 label_text = "Blue"
 mana_key = "u"
 
-[node name="DevotionSpinBoxBlack" parent="." instance=ExtResource("1_ykaa4")]
+[node name="DevotionInputBlack" parent="." instance=ExtResource("1_ykaa4")]
 layout_mode = 2
 label_text = "Black"
 mana_key = "b"
 
-[node name="DevotionSpinBoxRed" parent="." instance=ExtResource("1_ykaa4")]
+[node name="DevotionInputRed" parent="." instance=ExtResource("1_ykaa4")]
 layout_mode = 2
 
-[node name="DevotionSpinBoxGreen" parent="." instance=ExtResource("1_ykaa4")]
+[node name="DevotionInputGreen" parent="." instance=ExtResource("1_ykaa4")]
 layout_mode = 2
 label_text = "Green"
 mana_key = "g"
