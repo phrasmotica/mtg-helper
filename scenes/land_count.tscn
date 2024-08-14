@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://djqfxlo8q7vwc"]
+[gd_scene load_steps=3 format=3 uid="uid://djqfxlo8q7vwc"]
 
 [ext_resource type="Script" path="res://scripts/land_count.gd" id="1_wqeg8"]
+[ext_resource type="PackedScene" uid="uid://bo8ppyfh8pltu" path="res://scenes/button_spinner.tscn" id="2_6u07y"]
 
 [node name="LandCount" type="VBoxContainer"]
 custom_minimum_size = Vector2(200, 0)
@@ -11,31 +12,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 36
 text = "Desired Land Count"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="ButtonSpinner" parent="." instance=ExtResource("2_6u07y")]
 layout_mode = 2
-theme_override_constants/separation = 10
 
-[node name="SpinBox" type="SpinBox" parent="HBoxContainer"]
-visible = false
-layout_mode = 2
-max_value = 30.0
-alignment = 2
-
-[node name="AmountLabel" type="Label" parent="HBoxContainer"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(40, 2.08165e-12)
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-text = "0"
-horizontal_alignment = 2
-
-[node name="HSlider" type="HSlider" parent="HBoxContainer"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(100, 2.08165e-12)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-max_value = 30.0
-
-[connection signal="value_changed" from="HBoxContainer/SpinBox" to="." method="_on_spin_box_value_changed"]
-[connection signal="value_changed" from="HBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="amount_changed" from="ButtonSpinner" to="." method="_on_button_spinner_amount_changed"]
