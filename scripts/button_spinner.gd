@@ -23,7 +23,13 @@ var amount: int = 0:
 signal amount_changed(amount: int)
 
 func _on_minus_button_pressed():
-	amount -= 1
+	if Input.is_key_pressed(KEY_SHIFT):
+		amount = 0
+	else:
+		amount -= 1
 
 func _on_plus_button_pressed():
-	amount += 1
+	if Input.is_key_pressed(KEY_SHIFT):
+		amount = maximum
+	else:
+		amount += 1
