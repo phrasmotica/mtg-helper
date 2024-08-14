@@ -15,7 +15,7 @@ var land_count: int = 0
 
 var total_lands: int = 0:
 	set(value):
-		total_lands = value
+		total_lands = max(0, value)
 
 		if total_lands < land_count:
 			excess_label.text = "+" + str(land_count - total_lands) + " remaining"
