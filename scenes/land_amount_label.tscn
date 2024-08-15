@@ -1,15 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnvabli4di384"]
+[gd_scene load_steps=3 format=3 uid="uid://bnvabli4di384"]
 
+[ext_resource type="Theme" uid="uid://bptm41y4tvaqr" path="res://theme.tres" id="1_b2f6b"]
 [ext_resource type="Script" path="res://scripts/land_amount_label.gd" id="1_boe7r"]
 
 [node name="LandAmountLabel" type="HBoxContainer"]
 offset_right = 40.0
 offset_bottom = 40.0
+theme = ExtResource("1_b2f6b")
 script = ExtResource("1_boe7r")
 land_name = "Plains"
 
 [node name="Label" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+theme_type_variation = &"ContentLabel"
 text = "0x Plains"

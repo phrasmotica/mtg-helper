@@ -1,15 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://djqfxlo8q7vwc"]
+[gd_scene load_steps=4 format=3 uid="uid://djqfxlo8q7vwc"]
 
+[ext_resource type="Theme" uid="uid://bptm41y4tvaqr" path="res://theme.tres" id="1_52e0t"]
 [ext_resource type="Script" path="res://scripts/land_count.gd" id="1_wqeg8"]
 [ext_resource type="PackedScene" uid="uid://bo8ppyfh8pltu" path="res://scenes/button_spinner.tscn" id="2_6u07y"]
 
 [node name="LandCount" type="VBoxContainer"]
 custom_minimum_size = Vector2(200, 0)
+theme = ExtResource("1_52e0t")
 script = ExtResource("1_wqeg8")
 
 [node name="LandHeader" type="Label" parent="."]
 layout_mode = 2
-theme_override_font_sizes/font_size = 36
+theme_type_variation = &"HeaderLabel"
 text = "Desired Land Count"
 
 [node name="ButtonSpinner" parent="." instance=ExtResource("2_6u07y")]

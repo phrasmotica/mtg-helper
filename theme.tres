@@ -27,6 +27,10 @@ corner_radius_bottom_left = 8
 [resource]
 AmountLabel/base_type = &"Label"
 AmountLabel/styles/normal = SubResource("StyleBoxFlat_4mlk2")
+ContentLabel/base_type = &"Label"
+ContentLabel/font_sizes/font_size = 48
+HeaderLabel/base_type = &"Label"
+HeaderLabel/font_sizes/font_size = 64
 SpinnerButtonLeft/base_type = &"Button"
 SpinnerButtonLeft/font_sizes/font_size = 24
 SpinnerButtonLeft/styles/normal = SubResource("StyleBoxFlat_ms5pj")
