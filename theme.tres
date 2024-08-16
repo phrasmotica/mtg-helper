@@ -1,14 +1,20 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://bptm41y4tvaqr"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://bptm41y4tvaqr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4mlk2"]
 bg_color = Color(0.392701, 0.637098, 0.754504, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ms5pj"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ag6wp"]
+bg_color = Color(0.824809, 0.474035, 0.607892, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_13c77"]
 bg_color = Color(0.824809, 0.474035, 0.607892, 1)
 corner_radius_top_left = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ah40"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_abjwk"]
+bg_color = Color(0.384998, 0.666134, 0.5657, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ygjlc"]
 bg_color = Color(0.384998, 0.666134, 0.5657, 1)
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
@@ -26,16 +32,21 @@ corner_radius_bottom_left = 8
 
 [resource]
 AmountLabel/base_type = &"Label"
+AmountLabel/font_sizes/font_size = 48
 AmountLabel/styles/normal = SubResource("StyleBoxFlat_4mlk2")
 ContentLabel/base_type = &"Label"
 ContentLabel/font_sizes/font_size = 48
 HeaderLabel/base_type = &"Label"
 HeaderLabel/font_sizes/font_size = 64
-SpinnerButtonLeft/base_type = &"Button"
-SpinnerButtonLeft/font_sizes/font_size = 24
-SpinnerButtonLeft/styles/normal = SubResource("StyleBoxFlat_ms5pj")
-SpinnerButtonRight/base_type = &"Button"
-SpinnerButtonRight/font_sizes/font_size = 24
-SpinnerButtonRight/styles/normal = SubResource("StyleBoxFlat_8ah40")
+SpinnerButton/base_type = &"Button"
+SpinnerButton/font_sizes/font_size = 24
+SpinnerButtonDown/base_type = &"SpinnerButton"
+SpinnerButtonDown/styles/normal = SubResource("StyleBoxFlat_ag6wp")
+SpinnerButtonDownEnd/base_type = &"SpinnerButtonDown"
+SpinnerButtonDownEnd/styles/normal = SubResource("StyleBoxFlat_13c77")
+SpinnerButtonUp/base_type = &"SpinnerButton"
+SpinnerButtonUp/styles/normal = SubResource("StyleBoxFlat_abjwk")
+SpinnerButtonUpEnd/base_type = &"SpinnerButtonUp"
+SpinnerButtonUpEnd/styles/normal = SubResource("StyleBoxFlat_ygjlc")
 SpinnerPanelContainer/base_type = &"PanelContainer"
 SpinnerPanelContainer/styles/panel = SubResource("StyleBoxFlat_ehxbp")
