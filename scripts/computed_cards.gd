@@ -17,7 +17,7 @@ var total_lands: int = 0:
 	set(value):
 		total_lands = max(0, value)
 
-		if total_lands < land_count:
+		if total_lands < land_count and devotion_record and devotion_record.get_sum() > 0:
 			excess_label.text = "+" + str(land_count - total_lands) + " remaining"
 			excess_label.show()
 		else:
